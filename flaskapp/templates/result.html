@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h3>Common Friends</h3>
+
+<div>
+    {% if friends %}
+        <div>
+            <h2>{{ users[0] }} x {{ users[1] }}</h2>
+            <p>These are yours common friends.</p>
+        </div>
+        {% for friend in friends %}
+    <li><a href = "https://www.twitter.com/{{ friend }}">{{ friend }}</a></li>
+        {% endfor %}
+    {% else %}
+        <p>Ops, no common friends.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

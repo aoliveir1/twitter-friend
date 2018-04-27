@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask App - Twitter Common Friends</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+	<body>
+    <header class="global-nav-inner">
+        <div class="container">
+            <h1>Twitter Common Friends</h1>
+            <nav>
+                <ul class="nav js-global-actions">
+                    <li id="global-nav-home">
+                        <a href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li id="global-nav-home" >
+                        <a href="{{ url_for('about') }}">About</a>
+                    </li>
+                </ul>
+				</nav>
+			</div>
+		</header>
+
+        <br>
+
+        <div class="container">
+			{% block content %}
+			{% endblock %}
+    	</div>
+  	</body>
+</html>

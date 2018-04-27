@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="jumbo">
+        <p>Insert two twitter usernames.</p>
+        <form action = "/result" method="POST">
+            <h3>user1: <input type = "text" name = "user1"></h3>
+            <h3>user2: <input type = "text" name = "user2"></h3>
+            <h3><input type = "submit" value = "submit" /></h3>
+        </form>
+    </div>
+
+{% endblock %}
